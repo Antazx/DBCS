@@ -21,3 +21,10 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/SessionBeans/Ejercicio1/nbproject/private/
+/SessionBeans/Ejercicio1/EnterpriseApp-1/nbproject/private/
+/SessionBeans/Ejercicio1/EnterpriseApp-1/EnterpriseApp-1-war/nbproject/private/
+/SessionBeans/Ejercicio1/EnterpriseApp-1/EnterpriseApp-1-ejb/nbproject/private/
+/SessionBeans/Ejercicio1/EJBRemoteInterface/nbproject/private/
+/SessionBeans/Ejercicio1/EnterpriseApplication-1/nbproject/private/
+/SessionBeans/Ejercicio1/EnterpriseApplication-1/EnterpriseApplication-1-ejb/nbproject/private/
