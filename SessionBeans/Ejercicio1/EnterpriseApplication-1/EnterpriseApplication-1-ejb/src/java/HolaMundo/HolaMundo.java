@@ -21,13 +21,18 @@ public class HolaMundo implements HolaMundoRemote {
         System.out.println("[EJB] Incializar recursos");
     }
     
+    @PreDestroy
+    public void end(){
+        System.out.println("[EJB] Cerrar recursos");
+    }
+    
     @Override
     public String getResource() {
         return "[EJB] Recursos desde el Java Bean";
     }
     
-    @PreDestroy
-    public void end(){
-        System.out.println("[EJB] Cerrar recursos");
+    @Override
+    public void sayHi(String name) {
+        System.out.println("[EJB] Hola " +name +"!!");
     }
 }

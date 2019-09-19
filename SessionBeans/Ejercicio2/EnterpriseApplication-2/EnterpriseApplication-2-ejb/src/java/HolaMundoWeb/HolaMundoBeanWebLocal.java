@@ -3,16 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package HolaMundo;
+package HolaMundoWeb;
 
-import javax.ejb.Remote;
+import javax.ejb.Local;
 
 /**
  *
  * @author Anta
  */
-@Remote
-public interface HolaMundoRemote {
-    public String getResource();
-    public void sayHi(String name);
+@Local
+public interface HolaMundoBeanWebLocal {
+    public String diHola(String name);
 }
