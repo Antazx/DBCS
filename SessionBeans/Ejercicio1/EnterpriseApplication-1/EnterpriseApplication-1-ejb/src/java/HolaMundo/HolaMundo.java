@@ -21,8 +21,9 @@ public class HolaMundo implements HolaMundoRemote {
         System.out.println("[EJB] Incializar recursos");
     }
     
-    public void diHola(String name){
-        System.out.println("<----- Hola: " +name +" ----->");
+    @Override
+    public String getResource() {
+        return "[EJB] Recursos desde el Java Bean";
     }
     
     @PreDestroy
