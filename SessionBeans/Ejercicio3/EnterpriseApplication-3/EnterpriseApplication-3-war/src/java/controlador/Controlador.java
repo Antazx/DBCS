@@ -27,11 +27,16 @@ public class Controlador extends HttpServlet{
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("doGet: " +request.getParameter("name"));
-       
+        
         response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
+        
+        String kilometros = request.getParameter("kilometros");
        
+        request.setAttribute("millas", conversor.convertirMI(kilometros));
+        request.getRequestDispatcher("conversorOutput.jsp").forward(request, response);
+        
+        
+        /* Pinta la conversion en la pagina actual del controlador
         try {
             out.println("<div>");
             out.println("<h1> Millas: " +conversor.convertir(request.getParameter("kilometros")) +"</h1>");
@@ -39,5 +44,6 @@ public class Controlador extends HttpServlet{
         } finally {
             out.close();
         }
+        */
    }
 }

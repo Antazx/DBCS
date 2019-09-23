@@ -14,14 +14,26 @@ import javax.ejb.Stateless;
 @Stateless
 public class ConversorBean implements ConversorBeanLocal {
 
+    // Add business logic below. (Right-click in editor and choose
+    // "Insert Code > Add Business Method")
+
     @Override
-    public double convertir(String kilometros) {
+    public double convertirKM(String kilometros) {
+         if(kilometros.equals(""))
+            return 0;
         
         int number = Integer.parseInt(kilometros);
         double millas = number * 0.621371;
         return millas;
     }
 
-    // Add business logic below. (Right-click in editor and choose
-    // "Insert Code > Add Business Method")
+    @Override
+    public double convertirMI(String millas) {
+         if(millas.equals(""))
+            return 0;
+        
+        int number = Integer.parseInt(millas);
+        double kilometros = number / 0.621371;
+        return kilometros;
+    }
 }

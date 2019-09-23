@@ -13,5 +13,6 @@ import javax.ejb.Local;
  */
 @Local
 public interface ConversorBeanLocal {
-    public double convertir(String kilometros);
+    public double convertirKM(String kilometros);
+    public double convertirMI(String kilometros);
 }
