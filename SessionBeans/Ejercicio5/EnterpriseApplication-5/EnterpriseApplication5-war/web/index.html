@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <form id="cartForm" action="Controlador" method="post">  
+                Producto: <select name="producto" form="cartForm">
+                    <option value="producto1">Producto 1</option>
+                    <option value="producto2">Producto 2</option>
+                    <option value="producto3">Producto 3</option>
+                </select>
+                <p>Cantidad: <input type="number" name="cantidad" min="0"></p>
+                <input type="submit" value="Pedir!"/>
+            </form>
+            
+            <form id="getCart" action="Controlador" method="get">
+                <input type="submit" value="Ver Carro"/>
+            </form>
+        </div>
+    </body>
+</html>

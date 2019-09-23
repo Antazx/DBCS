@@ -35,8 +35,8 @@ public class Controlador extends HttpServlet{
         request.setAttribute("millas", conversor.convertirMI(kilometros));
         request.getRequestDispatcher("conversorOutput.jsp").forward(request, response);
         
-        
         /* Pinta la conversion en la pagina actual del controlador
+        PrintWriter out = response.getWriter()
         try {
             out.println("<div>");
             out.println("<h1> Millas: " +conversor.convertir(request.getParameter("kilometros")) +"</h1>");
