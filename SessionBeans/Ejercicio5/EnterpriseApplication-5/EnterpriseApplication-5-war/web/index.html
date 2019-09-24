@@ -19,11 +19,11 @@ and open the template in the editor.
                     <option value="producto3">Producto 3</option>
                 </select>
                 <p>Cantidad: <input type="number" name="cantidad" min="0"></p>
-                <input type="submit" value="Pedir!"/>
+                <input type="submit" name="action" value="Pedir"/>
             </form>
             
-            <form id="getCart" action="Controlador" method="get">
-                <input type="submit" value="Ver Carro"/>
+            <form id="getCart" action="Controlador" method="post">
+                <input type="submit" name="action" value="Ver Carro"/>
             </form>
         </div>
     </body>

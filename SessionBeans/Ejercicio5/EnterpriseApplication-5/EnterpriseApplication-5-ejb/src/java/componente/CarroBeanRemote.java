@@ -3,18 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package componentes;
+package componente;
 
 import java.util.ArrayList;
-import javax.ejb.Local;
+import javax.ejb.Remote;
+import modelo.Pedido;
 
 /**
  *
  * @author Anta
  */
-@Local
-public interface CarroLocal {
+@Remote
+public interface CarroBeanRemote {
     
-    public void añadir(String producto, String cantidad);
-    public ArrayList<String> getPedidos();
+    public void createCarro();
+    public void añadirPedido(Pedido e);
+    public ArrayList<Pedido> getCarro();
 }
