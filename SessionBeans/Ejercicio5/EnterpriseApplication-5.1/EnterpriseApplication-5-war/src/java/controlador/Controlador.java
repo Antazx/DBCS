@@ -6,10 +6,13 @@
 package controlador;
 
 import componente.CarroBeanRemote;
+import componente.SessionCounterBean;
+import componente.SessionCounterBeanRemote;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.ejb.EJB;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -28,6 +31,9 @@ import modelo.Pedido;
  */
 @WebServlet(name="Controlador", urlPatterns={"/Controlador"})
 public class Controlador extends HttpServlet{
+    
+    @EJB
+    private SessionCounterBeanRemote counter;
     
     @Override
     protected void doPost(HttpServletRequest request, 
@@ -51,6 +57,8 @@ public class Controlador extends HttpServlet{
 
     private void processRequest(HttpServletRequest request, 
             HttpServletResponse response) throws NamingException, ServletException, IOException{
+        response.setContentType("text/html;charset=UTF-8");
+        counter.updateCount();
         HttpSession session = request.getSession(false);
         String action = request.getParameter("action");
         String url =  "";
@@ -96,13 +104,13 @@ public class Controlador extends HttpServlet{
                 break;
         }
         
+        request.setAttribute("Count", counter.getCount());
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
     }
     
     private CarroBeanRemote lookupCarro() throws NamingException{
         Context context = new InitialContext();
-        
         CarroBeanRemote carro = (CarroBeanRemote) context.lookup("java:global/EnterpriseApplication-5/EnterpriseApplication-5-ejb/CarroBean");
         return carro;
     }

@@ -23,5 +23,10 @@
                 </tr>
             </c:forEach>
         </table>
+        
+        <div class="counter">
+            <h3>Contador de accesos a la aplicacion:</h3>
+            <p>${Count}</p>
+        </div>
     </body>
 </html>
