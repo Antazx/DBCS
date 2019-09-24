@@ -91,7 +91,7 @@ public class Controlador extends HttpServlet{
                         System.out.println(pedidos.get(i).getCantidad());
                     }
                     
-                    url = "verCarro.jsp";
+                    url = "/verCarro.jsp";
                 }
                 break;
         }

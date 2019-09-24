@@ -15,11 +15,13 @@
         <title>Tu Carro</title>
     </head>
     <body>
-        <c:forEach begin="0" end="${fn:length(centralityList) - 1}" var="index">
-            <tr>
-               <td><c:out value="${centralityList[index]}"/></td>
-               <td><c:out value="${labelList[index]}"/></td>
-            </tr>
-        </c:forEach>
+        <table>
+            <c:forEach begin="0" end="${fn:length(Pedidos) - 1}" var="index">
+                <tr>
+                   <td><c:out value="${Pedidos[index].getProducto()}"/></td>
+                   <td><c:out value="${Pedidos[index].getCantidad()}"/></td>
+                </tr>
+            </c:forEach>
+        </table>
     </body>
 </html>
