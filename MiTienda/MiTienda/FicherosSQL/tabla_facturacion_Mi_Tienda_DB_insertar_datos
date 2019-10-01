@@ -1,0 +1,6 @@
+INSERT INTO FACTURACION (USER_ID,FAC_NAME,FAC_ADDRESS,FAC_CITY,FAC_STATE,
+FAC_ZIP) VALUES 
+    (1,'Nombre1 Apellido11 Apellido12','Calle Usuario1','Poblacion1','Provincia1','11111'),
+    (3,'Nombre3 Apellido31 Apellido32','Calle Usuario3','Poblacion3','Provincia3','33333'),
+    (2,'Nombre2 Apellido21 Apellido22','Calle Usuario2','Poblacion2','Provincia2','22222');
+

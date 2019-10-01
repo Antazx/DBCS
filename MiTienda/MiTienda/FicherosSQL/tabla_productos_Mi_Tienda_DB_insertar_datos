@@ -1,0 +1,7 @@
+INSERT INTO PRODUCTOS(PROD_DESCRIPTION,PROD_PRICE,ITEM_ID) VALUES 
+    ('Producto1: componente11, componente12',11.88,'78jK889'),
+    ('Producto2: componente21, componente22',234.56,'AKJN89II'),
+    ('Producto3: componente31, componente32',34.88,'778899YY88'),
+    ('Producto4: componente41, componente42, componente43',567.03,'8UUgY78ii'),
+    ('Producto5: componente51',125.34,'Ui444yy6H-1-8');
+

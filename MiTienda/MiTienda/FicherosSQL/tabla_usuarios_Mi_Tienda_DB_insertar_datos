@@ -1,0 +1,5 @@
+INSERT INTO USUARIOS (USER_nAME,USER_PASSWD) VALUES 
+    ('Usuario1','1111'),
+    ('Usuario2','2222'),
+    ('Usuario3','3333');
+
