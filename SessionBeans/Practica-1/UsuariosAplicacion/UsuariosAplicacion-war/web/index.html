@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Acceso usuarios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <form id="logIn" action="Controlador" method="post">
+                <p>Usuario: <input type="text" name="nombre" required></p>
+                <p>Contraseña: <input type="password" name="clave" required></p>
+                <p>Producto: <select name="tipoUsuario" form="logIn">
+                    <option value="cliente">Cliente</option>
+                    <option value="empleado">Empleado</option>
+                    </select></p>
+                <input type="submit" name="action" value="logIn"/>
+            </form>
+        </div>
+    </body>
+</html>
