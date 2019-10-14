@@ -81,6 +81,12 @@ public class CompResAlqFacade implements CompResAlqFacadeRemote {
         alquiler.setFechafin(fechaFin);
         alquiler.setMatricula(matricula);
         
+        System.out.println("[CompResAlqFacade] (addAlquiler) before create: id:" 
+                +alquiler.getIdalquiler() +" Km:" +alquiler.getKilometrajesalida() 
+                +" idEmpleado:" +alquiler.getRealizadopor() +" nif:" +alquiler.getCliente()
+                +" ini:" +alquiler.getFechainicio().toString() +" fin:"
+                +alquiler.getFechafin().toString() +" matricula:" +alquiler.getMatricula());
+        
         alquilerFacade.create(alquiler);
         
         return (alquilerFacade.find(id) != null);

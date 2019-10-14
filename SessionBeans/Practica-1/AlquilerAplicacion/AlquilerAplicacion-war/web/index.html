@@ -12,12 +12,31 @@ and open the template in the editor.
     </head>
     <body>
         <div class="container">
-            <form id="logIn" action="Controlador" method="post">
+            <form id="addReserva" action="Controlador" method="post">
+            	<p>Añade una nueva reserva</p>
                 <p>Fecha comienzo: <input type="date" name="fechaInicio" required></p>
                 <p>Fecha fin: <input type="date" name="fechaFin" required></p>
                 <p>NIF: <input type="text" name="nif" required></p>
                 <p>Matricula: <input type="text" name="matricula" required></p>
                 <input type="submit" name="action" value="addReserva"/>
+            </form>
+            <form id="getReservasF" action="Controlador" method="post">
+            	<p>Consulta Reservas no ejecutadas</p>
+                <p>NIF: <input type="text" name="nif" required></p>
+                <input type="submit" name="action" value="getReservasF"/>
+            </form>
+            <form id="addAlquiler" action="Controlador" method="post">
+            	<p>Añade un nuevo alquiler</p>
+                <p>Número de reserva: <input type="number" name="idResrva" required></p>
+                <p>Kilometros: <input type="number" name="km" required></p>
+                <p>Nº Empleado: <input type="number" name="nEmpleado" required></p>
+                <input type="submit" name="action" value="addAlquiler"/>
+            </form>
+            <form id="consultaReserva" action="Controlador" method="post">
+            	<p>Consulta reservas</p>
+                <p>Fecha comienzo: <input type="date" name="fechaInicio" required></p>
+                <p>Fecha fin: <input type="date" name="fechaFin" required></p>
+                <input type="submit" name="action" value="consultaReserva"/>
             </form>
         </div>
     </body>

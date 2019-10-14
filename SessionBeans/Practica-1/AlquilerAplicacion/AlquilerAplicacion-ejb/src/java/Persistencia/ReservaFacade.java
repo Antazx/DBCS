@@ -30,6 +30,8 @@ public class ReservaFacade extends AbstractFacade<Reserva> implements ReservaFac
     @Override
     public List<Reserva> findByEjecutada(String nif){
         
+        System.out.println("[ReservaFacade] (findByEjecutada) in: " +nif);
+        
         Query query = em.createNamedQuery("Reserva.findByEjecutada");
         query.setParameter("ejecutada", 'F');
         query.setParameter("nif", nif);
@@ -40,10 +42,15 @@ public class ReservaFacade extends AbstractFacade<Reserva> implements ReservaFac
     @Override
     public List<Reserva> findByDateRange(Date inicio, Date fin){
         
+        System.out.println("[ReservaFacade] (findByDateRange) in: " +inicio.toString() +" - " +fin.toString());
+        
         Query query = em.createNamedQuery("Reserva.findByDateRange");
         query.setParameter("fechainicioalquiler", inicio);
         query.setParameter("fechafinalquiler", fin);
         List<Reserva> usuarios = (List<Reserva>) query.getResultList();
+        
+        System.out.println("[ReservaFacade] (findByDateRange) query results done");
+        
         return usuarios;
     }
     
