@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Acceso usuarios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <form id="logIn" action="Controlador" method="post">
+                <p>Fecha comienzo: <input type="date" name="fechaInicio" required></p>
+                <p>Fecha fin: <input type="date" name="fechaFin" required></p>
+                <p>NIF: <input type="text" name="nif" required></p>
+                <p>Matricula: <input type="text" name="matricula" required></p>
+                <input type="submit" name="action" value="addReserva"/>
+            </form>
+        </div>
+    </body>
+</html>

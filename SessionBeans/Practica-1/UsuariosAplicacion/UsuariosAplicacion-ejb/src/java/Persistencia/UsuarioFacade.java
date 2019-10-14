@@ -29,7 +29,6 @@ public class UsuarioFacade extends AbstractFacade<Usuario> implements UsuarioFac
     @Override
      public List<Usuario> findByName(String nombre){
          
-         System.out.println("[UsuarioFacade] in: " +nombre);
         Query query = em.createNamedQuery("Usuario.findByNombre");
         query.setParameter("nombre", nombre);
         List<Usuario> usuarios = (List<Usuario>) query.getResultList();
