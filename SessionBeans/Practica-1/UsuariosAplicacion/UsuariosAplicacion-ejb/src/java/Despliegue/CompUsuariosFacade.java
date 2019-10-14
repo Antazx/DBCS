@@ -21,7 +21,7 @@ import javax.ejb.Stateless;
  * @author Anta
  */
 @Stateless
-public class CompUsuariosFacade implements CompUsuariosFacadeRemote {
+public class CompUsuariosFacade implements CompUsuariosFacadeLocal {
     
     @EJB
     private ClienteFacadeLocal clienteFacade;

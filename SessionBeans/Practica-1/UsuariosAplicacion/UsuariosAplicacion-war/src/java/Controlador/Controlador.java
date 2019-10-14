@@ -5,7 +5,7 @@
  */
 package Controlador;
 
-import Despliegue.CompUsuariosFacadeRemote;
+import Despliegue.CompUsuariosFacadeLocal;
 import java.io.IOException;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Controlador extends HttpServlet{
     
     @EJB
-    private CompUsuariosFacadeRemote compUsuariosFacade;
+    private CompUsuariosFacadeLocal compUsuariosFacade;
     
     @Override
     protected void doPost(HttpServletRequest request, 
@@ -61,9 +61,15 @@ public class Controlador extends HttpServlet{
                 System.out.println("[Controlador] bloqueado: " +bloqueado);
                 
                 String[] licencias = compUsuariosFacade.getLicencias(nif);
-                for (String licencia : licencias) {
-                    System.out.println("[Controlador] getLicencias: " + licencia);
+                
+                if(licencias != null){
+                    for (String licencia: licencias) {
+                        System.out.println("[Controlador] getLicencias: " + licencia);
+                    }
+                } else {
+                    System.out.println("[Controlador] getLicencias: " +nif +" no tiene licencias");
                 }
+                
                 
                 break;
         }
