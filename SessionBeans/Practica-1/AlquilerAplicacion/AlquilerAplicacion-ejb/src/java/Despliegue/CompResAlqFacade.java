@@ -9,7 +9,6 @@ import Dominio.Alquiler;
 import Dominio.Reserva;
 import Persistencia.AlquilerFacadeLocal;
 import Persistencia.ReservaFacadeLocal;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.ejb.EJB;

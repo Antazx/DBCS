@@ -49,10 +49,10 @@ public class Controlador extends HttpServlet{
             HttpServletResponse response) throws ServletException, IOException{
         
         String action = request.getParameter("action");
-        String fechaInicio = "";
-        String fechaFin = "";
-        String nif = "";
-        String matricula = "";
+        String fechaInicio;
+        String fechaFin;
+        String nif;
+        String matricula;
                 
         switch(action){
             
@@ -83,6 +83,7 @@ public class Controlador extends HttpServlet{
                     Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
                 } 
                 break;
+                
             case "getReservasF":
                 
                     nif = request.getParameter("nif");

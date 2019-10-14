@@ -47,11 +47,11 @@ public class ReservaFacade extends AbstractFacade<Reserva> implements ReservaFac
         Query query = em.createNamedQuery("Reserva.findByDateRange");
         query.setParameter("fechainicioalquiler", inicio);
         query.setParameter("fechafinalquiler", fin);
-        List<Reserva> usuarios = (List<Reserva>) query.getResultList();
+        List<Reserva> disponibles = (List<Reserva>) query.getResultList();
         
         System.out.println("[ReservaFacade] (findByDateRange) query results done");
         
-        return usuarios;
+        return disponibles;
     }
     
     public ReservaFacade() {
