@@ -6,6 +6,7 @@
 package Despliegue;
 
 import Dominio.Vehiculo;
+import Persistencia.VehiculoFacadeLocal;
 import java.util.Date;
 import java.util.List;
 import javax.ejb.EJB;
@@ -17,12 +18,20 @@ import javax.ejb.Stateless;
  */
 @Stateless
 public class CompFlotaFacade implements CompFlotaFacadeLocal {
+    @EJB
+    private VehiculoFacadeLocal vehiculoFacade;
     
     @EJB
     private CompResAlqFacadeRemote compResAlqFacade;
     
     @Override
     public List<Vehiculo> getVehiculos(String[] Licencias, Date FechaInicial, Date fechaFinal) {
+        
+        String[] reservados = compResAlqFacade.getReservados(FechaInicial, fechaFinal);
+        if(reservados == null)
+            return null;
+        
+        
         return null;
     }
 
