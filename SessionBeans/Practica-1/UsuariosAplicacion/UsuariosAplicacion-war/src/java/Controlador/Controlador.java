@@ -69,8 +69,6 @@ public class Controlador extends HttpServlet{
                 } else {
                     System.out.println("[Controlador] getLicencias: " +nif +" no tiene licencias");
                 }
-                
-                
                 break;
         }
     }
