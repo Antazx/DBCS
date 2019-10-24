@@ -33,8 +33,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Reserva.findByFechareserva", query = "SELECT r FROM Reserva r WHERE r.fechareserva = :fechareserva"),
     @NamedQuery(name = "Reserva.findByFechainicioalquiler", query = "SELECT r FROM Reserva r WHERE r.fechainicioalquiler = :fechainicioalquiler"),
     @NamedQuery(name = "Reserva.findByFechafinalquiler", query = "SELECT r FROM Reserva r WHERE r.fechafinalquiler = :fechafinalquiler"),
-    @NamedQuery(name = "Reserva.findByDateRange", query = "SELECT r FROM Reserva r WHERE r.fechainicioalquiler >= :fechainicioalquiler AND r.fechafinalquiler <= :fechafinalquiler"),
-    @NamedQuery(name = "Reserva.findByEjecutada", query = "SELECT r FROM Reserva r WHERE r.ejecutada = :ejecutada AND r.nif = :nif"),
+    @NamedQuery(name = "Reserva.findByEjecutada", query = "SELECT r FROM Reserva r WHERE r.ejecutada = :ejecutada"),
     @NamedQuery(name = "Reserva.findByNif", query = "SELECT r FROM Reserva r WHERE r.nif = :nif"),
     @NamedQuery(name = "Reserva.findByMatricula", query = "SELECT r FROM Reserva r WHERE r.matricula = :matricula")})
 public class Reserva implements Serializable {

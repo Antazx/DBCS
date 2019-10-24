@@ -137,5 +137,6 @@ public class Controlador extends HttpServlet{
             default:
                 break;
         }
+        response.sendRedirect("index.html");
     }
 }
